@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dnyn APP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/layout.css">
+  <script type="text/javascript" src="JS/config.js"></script>
+</head>
+<body>
+
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/index3.html">
+      <div class="imgcontainer">
+        <img src="IMAGEM/dnyn.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <!--<button type="submit">Login</button>-->
+        <button type="submit" onclick="openNav().style.display='none'">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <div id="main">
+    <div class="mainEnter">
+      <img  class="logoMain" src="IMAGEM/dnyn.png" style="width: 60%;">
+      <p>Clique em login para ter acesso ao conteudo.</p>
+      <button  type="button" onclick="document.getElementById('id01').style.display='block'" class ="login">Login</button>
+    </div>
+  </div>
+     
+
+<!--
+<div id="nav">
+  <ul id="adminForm" >
+    <li>
+      <div id="mySidenavDina" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div id="adminCadastro" class="formulario">
+           ADMIN CADASTRO
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="frenteLojaForm">
+    <li>
+      <div id="mySidenavDina" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div id="frenteLojaCadastro" class="formulario">
+          FRENTE LOJA CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="frenteLojaMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          FRENTE LOJA MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="frenteLojaConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          FRENTE LOJA CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="estoqueForm">
+    <li>
+      <div id="estoqueCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          ESTOQUE CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="estoqueMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          ESTOQUE MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="estoqueConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          ESTOQUE CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="frenteCaixaForm">
+    <li>
+      <div id="frenteCaixaCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          FRENTE CAIXA CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="frenteCaixaMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          FRENTE CAIXA MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="frenteCaixaConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          FRENTE CAIXA CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="caixaForm">
+    <li>
+      <div id="caixaCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CAIXA CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="caixaMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CAIXA MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="caixaConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CAIXA CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="gerencialForm">
+    <li>
+      <div id="gerencialCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          GERENCIAL CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="gerencialMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          GERENCIA MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="gerencialRelatorio" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          GERENCIAL RELATORIO
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="creditoCobrancaForm">
+    <li>
+      <div id="creditoCobrancaCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CREDITO E COBRANCA CADSTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="creditoCobrancaMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CREDITO E COBRANCA MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="creditoCobrancaConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CREDITO E COBRANCA CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul id="contabilFiscalForm">
+    <li>
+      <div id="contabilFiscalCadastro" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CONTABIL FISCAL CADASTRO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="contabilFiscalMovimento" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CONTABIL FISCAL MOVIMENTO
+        </div>
+      </div>
+    </li>
+    <li>
+      <div id="contabilFiscalConsulta" class="sidenav conteudo" style="background-color: #006bb3;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="formulario">
+          CONTABIL FISCAL CONSULTA
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+-->
+  <div id="adminCadastroForm" class="adminCadastroForm2">
+          <span>Admin</span>
+  </div> 
+  <div id="mySidenavDina" class="sidenav conteudo" style="background-color: #006bb3;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+    
+    <div class="formulario adminCadastro">
+        <button onclick="openNav3()" class="dropbtn">Admin</button>
+             
+    </div>
+    <div id="frenteLojaCadastroForm" class="formulario frenteLojaCadastro">
+      <button>asdas</button>
+    </div>
+    <div id="frenteLojaMovimentoForm">
+      <input type="text" name="fffffffda">
+    </div>
+    <div id="frenteLojaConsultaForm">
+      frenteLojaConsultaForm
+    </div>
+    <div id="estoqueCadastroForm">
+      estoqueCadastroForm
+    </div>
+    <div id="estoqueMovimentoForm">
+      estoqueMovimentoForm
+    </div>
+    <div id="estoqueConsultaForm">
+      estoqueConsultaForm
+    </div>
+    <div id="frenteCaixaCadastroForm">
+      frenteCaixaCadastroForm
+    </div>
+    <div id="frenteCaixaMovimentoForm">
+      frenteCaixaMovimentoForm
+    </div>
+    <div id="frenteCaixaConsultaForm">
+      frenteCaixaConsultaForm
+    </div>
+    <div id="caixaCadastroForm">
+      caixaCadastroForm
+    </div>
+    <div id="caixaMovimentoForm">
+      caixaMovimentoForm
+    </div>
+    <div id="caixaConsultaForm">
+      caixaConsultaForm
+    </div>
+    <div id="gerencialCadastroForm">
+      gerencialCadastroForm
+    </div>
+    <div id="gerencialMovimentoForm">
+      gerencialMovimentoForm
+    </div>
+    <div id="gerencialRelatorioForm">
+      gerencialRelatorioForm
+    </div>
+
+    <div id=creditoCobrancaCadastroForm>
+      creditoCobrancaCadastroForm
+    </div>
+    <div id=creditoCobrancaMovimentoForm>
+      creditoCobrancaMovimentoForm
+    </div>
+    <div id=creditoCobrancaConsultaForm>
+      creditoCobrancaConsultaForm
+    </div>
+
+    <div id="contabilFiscalCadastroForm">
+      contabilFiscalCadastroForm
+    </div>
+    <div id="contabilFiscalMovimentoForm">
+      contabilFiscalMovimentoForm
+    </div>
+    <div id="contabilFiscalConsultaForm">
+      contabilFiscalConsultaForm
+    </div>
+
+
+  </div>
+
+  <div id="mySidenav" class="sidenav lateral">
+    <img  class="logoMenu" src="IMAGEM/dnyn.png">
+    <div class="dropdown">
+      <button onclick="menuAdmin();" onmouseover="javascript:mostraAdmin();" onmouseout="escondeAdmin()"; class="dropbtn">Admin 
+        <div id="admin" class="dropdown-content">
+          <span class="menuColor">Admin</span>
+          <a href= "javascript:void(0)" onclick="adminCadastro()">Cadastro</a>
+        </div>
+      </button>
+
+      <button onclick="menuFrenteLoja();" onmouseover="javascript:mostraFrenteLoja();" onmouseout="escondeFrenteLoja()"; class="dropbtn">Frente Loja
+        <div id="frenteLoja" class="dropdown-content">
+          <span class="menuColor">Frente Loja</span>
+          <a href= "javascript:void(0)" onclick="frenteLojaCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="frenteLojaMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="frenteLojaConsulta()">Consulta</a>
+        </div>
+      </button>
+
+      <button onclick="menuEstoque();" onmouseover="javascript:mostraEstoque();" onmouseout="escondeEstoque()"; class="dropbtn">Estoque
+        <div id="estoque" class="dropdown-content">
+          <span class="menuColor">Estoque</span>
+          <a href= "javascript:void(0)" onclick="estoqueCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="estoqueMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="estoqueConsulta()">Consulta</a>
+        </div>
+      </button>
+
+      <button onclick="menuFrenteCaixa();" onmouseover="javascript:mostraFrenteCaixa();" onmouseout="escondeFrenteCaixa()"; class="dropbtn">Frente Caixa
+        <div id="frenteCaixa" class="dropdown-content">
+          <span class="menuColor">Frente Caixa</span>
+          <a href= "javascript:void(0)" onclick="frenteCaixaCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="frenteCaixaMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="frenteCaixaConsulta()">Consulta</a>
+        </div> 
+      </button>
+
+      <button onclick="menuCaixa();" onmouseover="javascript:mostraCaixa();" onmouseout="escondeCaixa()"; class="dropbtn">Caixa
+        <div id="caixa" class="dropdown-content">
+          <span class="menuColor">Caixa</span>
+          <a href= "javascript:void(0)" onclick="caixaCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="caixaMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="caixaConsulta()">Consulta</a>
+        </div> 
+      </button>
+
+      <button onclick="menuGerencial();" onmouseover="javascript:mostraGerencial();" onmouseout="escondeGerencial()"; class="dropbtn">Gerencial
+        <div id="gerencial" class="dropdown-content">
+          <span class="menuColor">Gerencial</span>
+          <a href= "javascript:void(0)" onclick="gerencialCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="gerencialMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="gerencialRelatorio()">Relatorio</a>
+        </div> 
+      </button>
+
+      <button onclick="menuCreditoCobranca();" onmouseover="javascript:mostraCreditoCobranca();" onmouseout="escondeCreditoCobranca()"; class="dropbtn">Credito e Cobrança
+        <div id="creditoCobranca" class="dropdown-content">
+          <span class="menuColor">Credito e Cobrança</span>
+          <a href= "javascript:void(0)" onclick="creditoCobrancaCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="creditoCobrancaMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="creditoCobrancaConsulta()">Consulta</a>
+        </div> 
+      </button>
+
+      <button onclick="menuContabilFiscal();" onmouseover="javascript:mostraContabilFiscal();" onmouseout="escondeContabilFiscal()"; class="dropbtn">Contabíl Fiscal
+        <div id="contabilFiscal" class="dropdown-content">
+          <span class="menuColor">Contabíl Fiscal</span>
+          <a href= "javascript:void(0)" onclick="contabilFiscalCadastro()">Cadastro</a>
+          <a href= "javascript:void(0)" onclick="contabilFiscalMovimento()">Movimento</a>
+          <a href= "javascript:void(0)" onclick="contabilFiscalConsulta()">Consulta</a>
+        </div>        
+      </button>
+      <button onclick="menuSair()" class="dropbtn">Sair</button>
+    </div>
+  </div>
+</body>
+</html> 
